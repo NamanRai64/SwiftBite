@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './FlashDeals.css';
 
 // Mock data reflecting backend MenuItem structure from implementation.md
@@ -50,6 +51,7 @@ const mockMenuItems = [
 ];
 
 const FlashDeals = () => {
+  const navigate = useNavigate();
   const [deals, setDeals] = useState([]);
 
   useEffect(() => {
@@ -70,7 +72,7 @@ const FlashDeals = () => {
 
       <div className="deals-grid">
         {deals.map((item) => (
-          <div key={item.id} className="deal-card">
+          <div key={item.id} className="deal-card" onClick={() => navigate(`/restaurant/${item.id}`)} style={{cursor: 'pointer'}}>
             <div className="discount-tag">{item.discount}</div>
             <div className="card-img-container">
                <img src={item.imageUrl} alt={item.name} className="card-img" />
