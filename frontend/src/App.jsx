@@ -1,18 +1,19 @@
-import React from 'react'
-import Hero from './components/Hero'
-import PromoBanners from './components/PromoBanners'
-import Categories from './components/Categories'
-import FlashDeals from './components/FlashDeals'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import RestaurantDetail from './pages/RestaurantDetail';
+import Tracking from './pages/Tracking';
 
 function App() {
   return (
-    <>
-      <Hero />
-      <PromoBanners />
-      <Categories />
-      <FlashDeals />
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/restaurant/:id" element={<RestaurantDetail />} />
+        <Route path="/tracking/:orderId" element={<Tracking />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
