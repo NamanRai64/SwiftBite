@@ -1,0 +1,194 @@
+.promo-banners {
+  margin-top: -3rem;
+  z-index: 20;
+  position: relative;
+}
+
+.banners-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.banner {
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: var(--transition);
+}
+
+.banner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+}
+
+.banner-bg.align-right img {
+  object-position: right center;
+  opacity: 0.8;
+  mix-blend-mode: normal;
+}
+
+.banner-bg.align-center img {
+  object-position: center;
+  opacity: 0.9;
+  mix-blend-mode: normal;
+}
+
+.banner-content, .banner-bottom-content {
+  position: relative;
+  z-index: 2;
+}
+
+.banner h2 {
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.banner .subtitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-dark);
+}
+
+.banner-btn {
+  background: white;
+  color: var(--color-text-dark);
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.banner-yellow {
+  background-color: #FFDE59;
+  min-height: 250px;
+}
+
+.banner-green {
+  background-color: #0E5E4E;
+  min-height: 250px;
+}
+
+.banner-red {
+  background-color: #FF5E3A;
+}
+
+.tall-banner {
+  height: 100%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tall-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tall-banner .banner-bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Discount Badges */
+.circle-badge {
+  background: white;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  color: var(--color-text-dark);
+}
+
+.circle-badge span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.circle-badge strong {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.yellow-circle {
+  background: #FFDE59;
+}
+
+.white-circle {
+  background: white;
+  top: 40%;
+}
+
+.banner-yellow .circle-badge {
+  left: auto;
+  right: 15%;
+}
+
+.banner-green .circle-badge {
+  left: auto;
+  right: 40%;
+  top: 60%;
+}
+
+.ribbon {
+  background: #FFC107;
+  color: var(--color-text-dark);
+  padding: 0.25rem 1rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  transform: rotate(-5deg);
+}
+
+.ribbon-red {
+  background: #E53935;
+  color: white;
+  padding: 0.25rem 1rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  transform: rotate(-5deg);
+}

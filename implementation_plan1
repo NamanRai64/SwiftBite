@@ -1,0 +1,52 @@
+# Food Delivery App UI/UX Implementation Plan
+
+This plan outlines the steps to build the frontend web application based on the provided design image and perfectly aligned with the Spring Boot backend architecture documented in `README.md` and `implementation.md`.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Since the project is predominantly a Spring Boot backend, I propose building the frontend as a clean, Vanilla HTML/CSS/JS web application inside a `frontend` folder. 
+> This approach keeps the frontend lightweight and easily servable by your Gateway or an NGINX container.
+> Please let me know if you would prefer using a framework like Vite (React/Vue) instead.
+
+## Proposed Changes
+
+### `frontend`
+The new web interface will reside here.
+
+#### [NEW] [frontend/index.html](file:///c:/myProjects/SwiftBite/frontend/index.html)
+The main entry point for the landing page. It will be structured semantically and include:
+- **Navigation:** Logo, Links, Cart, and Login button
+- **Hero Section:** "Delicious food at your doorstep" with floating review badges and primary CTA.
+- **Top Deals / Promo Banners:** Asymmetric grid with 3 highlight cards (Meal, Pizza, Burgers).
+- **Categories Segment:** "Explore Delicious Cuisine" with floating category pills. 
+- **Flash Deals Grid:** Product displays with live prices, star ratings, and Add to Cart controls.
+
+#### [NEW] [frontend/index.css](file:///c:/myProjects/SwiftBite/frontend/index.css)
+A highly polished, vanilla CSS file featuring:
+- **Design Tokens:** CSS variables for brand colors (Deep Green, Vibrant Orange, Light Green backgrounds).
+- **Typography:** Modern Google Fonts (e.g., 'Outfit' or 'Inter').
+- **Layouts:** CSS Grid and Flexbox for fully responsive structures.
+- **Micro-animations:** Subtle hover states, smooth transitions, and dynamic glassmorphism effects for a premium feel.
+
+#### [NEW] [frontend/app.js](file:///c:/myProjects/SwiftBite/frontend/app.js)
+Javascript for interactivity and future integration:
+- Fetching and populating product cards/flash deals (mocked initially, ready for `api/v1/restaurants`).
+- Cart interactions (incrementing/decrementing items).
+- Dynamic sticky navbar and scroll animations.
+
+#### [NEW] [frontend/assets/](file:///c:/myProjects/SwiftBite/frontend/assets)
+I will generate custom, high-quality images using the UI generation tool to perfectly match the placeholder images in the design (e.g., Hero Burger, Promos, Food Items) so the app looks extremely premium out of the box.
+
+## Open Questions
+
+> [!WARNING]  
+> 1. **Framework Choice:** Do you approve of using Vanilla HTML/CSS/JS, or would you prefer a Vite + React setup?
+> 2. **Backend Integration:** Currently, I will mock the exact data models outlined in your `implementation.md` (e.g., `MenuItem`, `Restaurant`). Should I implement actual `fetch()` calls to `localhost:8080/api/v1/...` right away?
+
+## Verification Plan
+
+### Manual Verification
+1. I will provide a browser preview to ensure all styling flawlessly matches the provided mockups, including typography, colors, and spatial harmony.
+2. I will test responsive behaviors across different viewport sizes.
+3. I will showcase the interactive elements (buttons, hover effects, cart interactions) proving it feels premium and dynamic.
