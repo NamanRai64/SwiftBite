@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="container nav-container">
         <a href="/" className="logo">
           <span className="logo-icon">🌿</span>
-          DelishDrop
+          SwiftBite
         </a>
         
         <div className="nav-links">
